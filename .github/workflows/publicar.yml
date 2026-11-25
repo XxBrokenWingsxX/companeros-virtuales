@@ -1,0 +1,33 @@
+# Publica en Releases las versiones que estén en publicar/<versión>/ y todavía no tengan Release.
+# El instalador viene en pedazos de 20 MB (GitHub no acepta archivos de más de 100 MB en el repo):
+# aquí se unen, se revisa la huella SHA-256 y se suben el .exe, el .blockmap y latest.yml,
+# que es lo que lee la app para actualizarse sola.
+name: Publicar versión
+on:
+  push:
+    branches: [main]
+    paths: ['publicar/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unir y publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for dir in publicar/*/; do
+            v=$(basename "$dir")
+            if gh release view "v$v" >/dev/null 2>&1; then echo "v$v ya está publicada"; continue; fi
+            exe="CompanerosVirtuales-Setup-$v.exe"
+            cat "$dir"setup.part* > "$exe"
+            sha256sum -c "$dir"sha256.txt
+            grep -q "version: $v" "$dir"latest.yml
+            gh release create "v$v" "$exe" "$dir$exe.blockmap" "$dir"latest.yml \
+              --target "$GITHUB_SHA" --title "Compañeros virtuales $v" --notes-file "$dir"notas.md
+            rm -f "$exe"
+          done
