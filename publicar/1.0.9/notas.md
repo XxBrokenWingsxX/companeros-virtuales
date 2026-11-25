@@ -1,0 +1,2 @@
+- **Arreglo importante:** la búsqueda de actualizaciones no encontraba el repositorio en la app instalada (1.0.6–1.0.8 decían "Todavía no hay dónde buscar actualizaciones"). Desde esta versión sí se actualiza sola. Instala esta a mano una vez.
+- Incluye todo lo de la 1.0.8 (escritorio vacío, agarrar mascotas, barra vertical).

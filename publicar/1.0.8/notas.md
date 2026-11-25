@@ -1,3 +1,0 @@
-- Las mascotas ya no desaparecen con el escritorio vacío, el menú Inicio o la búsqueda (Windows 11 lo marcaba como "pantalla completa").
-- Se pueden volver a agarrar y lanzar después de que se esconden o se mueve la barra de tareas.
-- Barra de tareas vertical, arriba o auto-oculta: la ventana se reacomoda sola (también con otro monitor o al volver de suspender).
