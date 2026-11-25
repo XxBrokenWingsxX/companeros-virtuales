@@ -1,0 +1,1 @@
+- Versión de prueba para comprobar que la actualización automática llega sola. Sin cambios en la app.
