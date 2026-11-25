@@ -1,0 +1,3 @@
+- Arreglo para la barra de tareas a un lado (vertical), arriba o auto-oculta: las mascotas se reacomodan solas al moverla, al conectar otro monitor o al volver de suspender.
+- Con la barra auto-oculta, la barra vuelve a salir al acercar el ratón (antes Windows creía que había algo en pantalla completa).
+- Primera actualización que llega sola 🎉
