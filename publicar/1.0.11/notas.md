@@ -1,3 +1,0 @@
-- Seguridad: la conexión entre compus ahora aguanta mejor a extraños en la red (un solo emparejamiento a la vez, límite de intentos y de conexiones, se corta quien no saluda).
-- Seguridad: los archivos que llegan de otra compu se revisan más (tamaño, quién los manda) y Windows los marca como "de otra compu" para avisar antes de abrir algo peligroso.
-- Seguridad: las ventanas de la app ya no pueden navegar a páginas de internet ni abrir ventanas nuevas, y tienen una política de contenido estricta.
