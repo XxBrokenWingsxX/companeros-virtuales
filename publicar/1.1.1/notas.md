@@ -1,0 +1,3 @@
+- Firma casera: el instalador y la app ya vienen firmados con el certificado de "Companeros virtuales (David)".
+- Las actualizaciones revisan esa firma (por ahora solo la anotan; en una versión próxima solo se instalará lo que venga firmado).
+- Arreglos chiquitos en los celos y los abrazos.
